@@ -69,14 +69,169 @@
     <main>
         <div class="container">
             <div class="row">
+                <div class="my-2 p-2 rounded d-flex justify-content-center" style="background-color: #fff;">
+                    <form action="" method="post" enctype="multipart/form-data" id="filter">
+                        <table>
+                            <tr>
+                                <td><input type="text" placeholder="Nhập từ khóa tìm kiếm" style="width: 100%;;"></td>
+                                <td><input class="btn btn-primary text-while" type="submit" value="Tìm Kiếm" style="background-color: #169ee3; 
+                                  margin-left: 5px; 
+                                  background-color: #169ee3; 
+                                  margin-left: 10px; 
+                                  "></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <select name="loai" id="loai" class="select-css">
+                                        <option value="all">-Loại-</option>
+                                        <option value="Nhà">Nhà</option>
+                                        <option value="Căn Hộ">Căn Hộ</option>
+                                        <option value="Đất">Đất</option>
+                                        <option value="Nhà Trọ">Nhà Trọ</option>
+                                        <option value="Văn Phòng">Văn Phòng</option>
+                                        <option value="all">Tất Cả</option>
+                                    </select>
+
+                                    <select name="hinhthuc" id="hinhthuc" class="select-css">
+                                        <option value="all">-Hình Thức-</option>
+                                        <option value="thuê">Thuê</option>
+                                        <option value="bán">Bán</option>
+                                        <option value="all">Tất Cả</option>
+                                    </select>
+
+                                    <select name="area" id="area" class="select-css">
+                                        <option value="all">-Quận/Huyện-</option>
+                                        <option value="Ninh Kiều">Ninh Kiều</option>
+                                        <option value="Cái Răng">Cái Răng</option>
+                                        <option value="Bình Thủy">Bình Thủy</option>
+                                        <option value="Phong Điền">Phong Điền</option>
+                                        <option value="Ô Môn">Ô Môn</option>
+                                        <option value="Thốt Nốt">Thốt Nốt</option>
+                                        <option value="all">Tất Cả</option>
+                                    </select>
+
+                                    <select name="price" id="price" class="select-css">
+                                        <option value="all">-Giá-</option>
+                                        <option value="<500tr">
+                                            < 500 triệu</option>
+                                        <option value="500tr-1t">500 triệu - 1 tỷ</option>
+                                        <option value="1t-3t">1 tỷ - 3 tỷ</option>
+                                        <option value="3t-5t">3 tỷ - 5 tỷ</option>
+                                        <option value="5t-10t">5 tỷ - 10 tỷ</option>
+                                        <option value="5t-10t">> 10 tỷ</option>
+                                        <option value="all">Tất Cả</option>
+                                    </select>
+
+                                    <select name="square" id="square" class="select-css">
+                                        <option value="all">-Diện Tích-</option>
+                                        <option value="< 30m2">
+                                            < 30 m<sup>2</sup>
+                                        </option>
+                                        <option value="30-40">30 - 40m<sup>2</sup></option>
+                                        <option value="40-80">40 - 80m<sup>2</sup></option>
+                                        <option value="80-150">80 - 150m<sup>2</sup></option>
+                                        <option value="150-300">150 - 300m<sup>2</sup></option>
+                                        <option value="300-600">300 - 600m<sup>2</sup></option>
+                                        <option value="600-1000">600 - 1000m<sup>2</sup></option>
+                                        <option value="600-1000">> 1000m<sup>2</sup></option>
+                                        <option value="all">Tất Cả</option>
+                                    </select>
+
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-lg-8">
-                    <div>KẾT QUẢ</div>
+                    <h2>KẾT QUẢ</h2>
                     <div class="container" id="root-d">
 
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <h1>LỌC</h1>
+                    <div class="col">
+                        <h2 style="font-weight: 400;" class="text-center">BẤT ĐỘNG SẢN VIP</h2>
+
+                        <div class="card me-lg-3 me-sm-0 mb-2">
+                            <img src="./images/img-news/vip1.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 style="font-size: 14px;" class="card-title">Nhà đường số 23 khu Thới Nhựt 1 An
+                                    Khánh</h5>
+                                <p style="font-size: 13px;" class="card-text">đường số 23, nhà số 30-32 Khu dân cư
+                                    Thới Nhựt 1 , phường An Khánh , quận Ninh kiều, thành phố Cần Thơ</p>
+                            </div>
+                            <div class="card-footer text-end">
+                                <small class="text-muted">15/10/2022</small>
+                            </div>
+                        </div>
+                        <div class="card me-lg-3 me-sm-0 mb-2">
+                            <img src="./images/img-news/vip2.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 style="font-size: 14px;" class="card-title">Nhà 1 trệt 1 lầu đường số 23 Khu
+                                    Thới Nhựt</h5>
+                                <p style="font-size: 13px;" class="card-text">đường số 23, khu dân cư Thới Nhựt 1
+                                    Phường An Khánh,Ninh Kiều,Cần Thơ</p>
+                            </div>
+                            <div class="card-footer text-end">
+                                <small class="text-muted">07/10/2022</small>
+                            </div>
+                        </div>
+                        <div class="card mb-2">
+                            <img src="./images/img-news/vip3.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 style="font-size: 14px;" class="card-title">Nhà 1 trệt 1 lầu đường số 22 Khu dân
+                                    cư Thới Nhựt 1</h5>
+                                <p style="font-size: 13px;" class="card-text">đường số 22, khu dân cư Thới Nhựt 1,
+                                    phường An Khánh,quận Ninh Kiều ,TP Cần Thơ</p>
+                            </div>
+                            <div class="card-footer text-end">
+                                <small class="text-muted">02/12/2022</small>
+                            </div>
+                        </div>
+
+                        <div class="col mt-3 mb-3">
+
+                            <div class="card me-lg-3 me-sm-0 mb-2">
+                                <img src="./images/img-news/vip4.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 style="font-size: 14px;" class="card-title">Chung cư Hồng Loan lô 6A sổ hồng
+                                        hoàn chỉnh</h5>
+                                    <p style="font-size: 13px;" class="card-text">Phường Hưng Thạnh, Quận Cái Răng,
+                                        Cần Thơ</p>
+                                </div>
+                                <div class="card-footer text-end">
+                                    <small class="text-muted">15/10/2022</small>
+                                </div>
+                            </div>
+                            <div class="card me-lg-3 me-sm-0 mb-2">
+                                <img src="./images/img-news/vip5.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 style="font-size: 14px;" class="card-title">Căn hộ Chung cư Nam Long – Hồng
+                                        Phát tầng 4</h5>
+                                    <p style="font-size: 13px;" class="card-text">Kdc Nam Long, Hưng Thạnh, Cái
+                                        Răng, Cần Thơ</p>
+                                </div>
+                                <div class="card-footer text-end">
+                                    <small class="text-muted">07/10/2022</small>
+                                </div>
+                            </div>
+                            <div class="card mb-2">
+                                <img src="./images/img-news/vip6.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 style="font-size: 14px;" class="card-title">Căn hộ The River Thủ Thiêm
+                                        2PN-2WC-84M2</h5>
+                                    <p style="font-size: 13px;" class="card-text">62 Hoàng Thế Thiện, Khu Đô Thị
+                                        SaLa Quận 2</p>
+                                </div>
+                                <div class="card-footer text-end">
+                                    <small class="text-muted">02/12/2022</small>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
 
                 </div>
             </div>

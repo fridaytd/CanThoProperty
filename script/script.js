@@ -3,7 +3,7 @@ let data_string = `[
         "id": "d001",
         "name": "NỀN KHU DÂN CƯ GẦN CHỢ TRÀ NÓC",
         "loai": "Đất",
-        "hinhthuc": "bán",
+        "hinhthuc": "Bán",
         "area": "Bình thủy",
         "price": "1.85 tỷ",
         "square": "85",
@@ -16,7 +16,7 @@ let data_string = `[
         "id": "d002",
         "name": "NỀN MẶT TIỀN ĐƯỜNG HOÀNG QUỐC VIỆT",
         "loai": "Đất",
-        "hinhthuc": "bán",
+        "hinhthuc": "Bán",
         "area": "Ninh Kiều",
         "price": "9.99 tỷ",
         "square": "160",
@@ -28,9 +28,9 @@ let data_string = `[
     },
     {
         "id": "d003",
-        "name": "BÁN NỀN MẶT TIỀN ĐƯỜNG NGUYỄN VĂN QUANG KDC NAM LONG",
+        "name": "Bán NỀN MẶT TIỀN ĐƯỜNG NGUYỄN VĂN QUANG KDC NAM LONG",
         "loai": "Đất",
-        "hinhthuc": "bán",
+        "hinhthuc": "Bán",
         "area": "Cái Răng",
         "price": "5.6 tỷ",
         "square": "85",
@@ -42,9 +42,9 @@ let data_string = `[
     },
     {
         "id": "ch001",
-        "name": "BÁN CĂN CHUNG CƯ HỒNG LOAN LÔ 6A SỐ HỒNG HOÀN CHỈNH",
+        "name": "Bán CĂN CHUNG CƯ HỒNG LOAN LÔ 6A SỐ HỒNG HOÀN CHỈNH",
         "loai": "Căn Hộ",
-        "hinhthuc": "bán",
+        "hinhthuc": "Bán",
         "area": "Cái Răng",
         "price": "850 triệu",
         "square": "47",
@@ -59,7 +59,7 @@ let data_string = `[
         "id": "ch002",
         "name": "CĂN HÔ CHUNG CƯ NAM LONG - HỒNG PHÁT TẦNG 4",
         "loai": "Căn Hộ",
-        "hinhthuc": "bán",
+        "hinhthuc": "Bán",
         "area": "Cái Răng",
         "price": "880 triệu",
         "square": "38.1",
@@ -71,7 +71,7 @@ let data_string = `[
         "id": "ch003",
         "name": "CĂN HỘ CHUNG CƯ LÊ HỒNG NHI PHƯỜNG BA LÁNG CÁI RĂNG CẦN THƠ",
         "loai": "Căn Hộ",
-        "hinhthuc": "bán",
+        "hinhthuc": "Bán",
         "area": "Cái Răng",
         "price": "1.48 tỷ",
         "square": "67",
@@ -86,7 +86,7 @@ let data_string = `[
         "id": "ch004",
         "name": "CĂN HỘ CHUNG CƯ LÊ HỒNG NHI",
         "loai": "Căn Hộ",
-        "hinhthuc": "bán",
+        "hinhthuc": "Bán",
         "area": "Cái Răng",
         "price": "1.1 tỷ",
         "square": "73",
@@ -101,7 +101,7 @@ let data_string = `[
         "id": "ch005",
         "name": "CĂN HỘ THE RIVER THỦ THIÊM",
         "loai": "Căn Hộ",
-        "hinhthuc": "bán",
+        "hinhthuc": "Bán",
         "area": "Ninh Kiều",
         "price": "15 tỷ",
         "square": "84",
@@ -115,7 +115,7 @@ let data_string = `[
         "id": "ch006",
         "name": "DÃY B TẦNG 2 CHUNG CƯ HỒNG LOAN 6A",
         "loai": "Căn Hộ",
-        "hinhthuc": "bán",
+        "hinhthuc": "Bán",
         "area": "Cái Răng",
         "price": "850 triệu",
         "square": "47",
@@ -129,7 +129,7 @@ let data_string = `[
         "id": "ch007",
         "name": "CHUNG CƯ GIÁ RẺ LÃI SUẤT THẤP",
         "loai": "Căn Hộ",
-        "hinhthuc": "bán",
+        "hinhthuc": "Bán",
         "area": "Cái Răng",
         "price": "600 triệu",
         "square": "40",
@@ -143,7 +143,7 @@ let data_string = `[
         "id": "ch008",
         "name": "NHÀ ĐẸP - VỊ TRÍ ĐẸP - LỘ RỘNG - 6M NẰM KẾ - ĐẠI HỌC CT",
         "loai": "Căn Hộ",
-        "hinhthuc": "bán",
+        "hinhthuc": "Bán",
         "area": "Ninh Kiều",
         "price": "2 tỉ 990 triệu",
         "square": "56.52",
@@ -157,7 +157,7 @@ let data_string = `[
         "id": "ch009",
         "name": "SHOPHOUSE KHU ĐÔ THỊ AN PHÚ 1 CẦN THƠ",
         "loai": "Căn Hộ",
-        "hinhthuc": "bán",
+        "hinhthuc": "Bán",
         "area": "Cái Răng",
         "price": "2.92 tỉ",
         "square": "113",
@@ -287,44 +287,107 @@ let data = JSON.parse(data_string)
 
 console.log(data)
 
-data.forEach(element => {
-    let st = `<div class="row">
-    <div class="card mb-3 p-0">
-        <div class="row g-0">
-            <div class="col-md-4">
-                <img src="${element.img[0]}" class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                    <h5 class="card-title">${element.name}</h5>
-                    <div class="card-text">
-                        <table>
-                            <tr>
-                                <td><i class="fas fa-landmark"></i></td>
-                                <td>Loại:  ${element.loai}</td>
-                            </tr>
-                            <tr>
-                                <td><i class="fas fa-money-check-alt"></i></td>
-                                <td>Hình thức: ${element.hinhthuc}</td>
-                            </tr>
-                            <tr>
-                                <td><i class="fas fa-dollar-sign"></i></td>
-                                <td>Giá: ${element.price}</td>
-                            </tr>
-                            <tr>
-                                <td><i class="fas fa-expand-arrows-alt"></i></td>
-                                <td>Diện tích: ${element.square} m<sup>2</sup></td>
-                            </tr>
-                            <tr>
-                                <td><i class="fas fa-map-marker-alt"></i></td>
-                                <td>Khu vực: ${element.area}</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>`
-$('#root-d').append(st);
-});
+// data.forEach(element => {
+//     let st = `<div class="row">
+//     <div class="card mb-3 p-0" id="${element.id}">
+//         <div class="row g-0">
+//             <div class="col-md-4">
+//                 <img src="${element.img[0]}" class="img-fluid rounded-start" alt="...">
+//             </div>
+//             <div class="col-md-8">
+//                 <div class="card-body">
+//                     <h5 class="card-title">${element.name}</h5>
+//                     <div class="card-text">
+//                         <table>
+//                             <tr>
+//                                 <td><i class="fas fa-landmark"></i></td>
+//                                 <td>Loại:  ${element.loai}</td>
+//                             </tr>
+//                             <tr>
+//                                 <td><i class="fas fa-money-check-alt"></i></td>
+//                                 <td>Hình thức: ${element.hinhthuc}</td>
+//                             </tr>
+//                             <tr>
+//                                 <td><i class="fas fa-dollar-sign"></i></td>
+//                                 <td>Giá: ${element.price}</td>
+//                             </tr>
+//                             <tr>
+//                                 <td><i class="fas fa-expand-arrows-alt"></i></td>
+//                                 <td>Diện tích: ${element.square} m<sup>2</sup></td>
+//                             </tr>
+//                             <tr>
+//                                 <td><i class="fas fa-map-marker-alt"></i></td>
+//                                 <td>Khu vực: ${element.area}</td>
+//                             </tr>
+//                         </table>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+// </div>`
+//     $('#root-d').append(st);
+// });
+
+let render = (loai, hinhthuc, area, price, square) => {
+    i = 0;
+    data.forEach(element => {
+        if ((loai == 'all' || loai == element.loai) && (hinhthuc == "all" || hinhthuc == element.hinhthuc) && (area == 'all' || area == element.area) && (square == 'all' || square == element.square)) {
+            let st = `<div class="row">
+                        <div class="card mb-3 p-0" id="${element.id}">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="${element.img[0]}" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">${element.name}</h5>
+                                        <div class="card-text">
+                                            <table>
+                                                <tr>
+                                                    <td><i class="fas fa-landmark"></i></td>
+                                                    <td>Loại:  ${element.loai}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i class="fas fa-money-check-alt"></i></td>
+                                                    <td>Hình thức: ${element.hinhthuc}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i class="fas fa-dollar-sign"></i></td>
+                                                    <td>Giá: ${element.price}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i class="fas fa-expand-arrows-alt"></i></td>
+                                                    <td>Diện tích: ${element.square} m<sup>2</sup></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i class="fas fa-map-marker-alt"></i></td>
+                                                    <td>Khu vực: ${element.area}</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`
+            $('#root-d').append(st);
+            i++;
+        }
+
+    });
+    if (i === 0) {
+        let te = `<div>Không tìm thấy</div>`;
+        $('#root-d').append(te);
+    }
+}
+
+let form = document.getElementById('filter')
+console.log(form)
+
+document.onload = render("all", "all", "all", "all", "all")
+
+form.onchange = () => {
+    $('#root-d').text('');
+    render($('#loai').val(), $('#hinhthuc').val(), $('#area').val(), "all", "all");
+}
