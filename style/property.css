@@ -1,0 +1,47 @@
+.card-container {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    padding: 0px;
+    border-radius: 5px;
+    background-color: #fff;
+    height: 250px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+}
+
+.card-container .card-image img {
+    object-fit: cover;
+    object-position: center;
+    height: 250px;
+    width: 100%;
+}
+
+.card-detail {
+    padding: 20px;
+}
+
+
+.card img {
+    object-fit: cover;
+    object-position: center;
+    height: 220px;
+    width: 100%;
+}
+
+.card i {
+    color: #2e5fab;
+}
+
+.card .card-title {
+    color: #2e5fab;
+}
+
+.card table td {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.card:hover {
+    transform: scale(1.025);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 10px
+}
