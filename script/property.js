@@ -80,6 +80,13 @@ let run = (data) => {
 
         $('#root-d').text('');
         render($('#loai').val(), $('#hinhthuc').val(), $('#area').val(), $('#price').val(), $('#square').val());
+        let listItems = document.querySelectorAll('.list-items')
+        console.log(listItems)
+        listItems.forEach(element => {
+            element.addEventListener('click', () => {
+                location.href = './detail.html' + '?id=' + element.id
+            })
+        })
     }
     let listItems = document.querySelectorAll('.list-items')
     console.log(listItems)
