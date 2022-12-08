@@ -17,7 +17,7 @@ let run = (data) => {
             else {
                 gia = element.price
             }
-            let keyWord = $('#search').val().toUpperCase()
+            let keyWord = $('#search').val().toUpperCase();
             if ((keyWord == '' || element.name.toUpperCase().includes(keyWord)) && (loai == 'all' || loai == element.loai) && (hinhthuc == "all" || hinhthuc == element.hinhthuc) && (area == 'all' || area == element.area) && (price == 'all' || (element.price >= firstVal(price) && element.price < secondVal(price))) && (square == 'all' || (element.square >= firstVal(square) && element.square < secondVal(square)))) {
                 let st = `<div class="row">
                         <div class="card mb-3 p-0 list-items" id="${element.id}">

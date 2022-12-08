@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tin đã lưu</title>
+    <title>Bất động sản</title>
     <link rel="stylesheet" href="./bootstrap-5.2.3-dist/css/bootstrap.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="stylesheet" href="./style/style.css">
@@ -57,6 +57,7 @@
                         </li>
                     </ul>
                     <div>
+                        <a href="./saved.html" class="me-3" style="font-size: 1.5em;"><i class="far fa-heart"></i></a>
                         <button class="btn btn-primary">Đăng nhập</button>
                         <button class="btn btn-outline-primary">Đăng kí</button>
                     </div>
@@ -71,13 +72,9 @@
             <div class="row">
                 <div class="container my-3 p-2 rounded rounded-2" style="background-color: #fff; min-height: 100px">
                     <form action="" method="post">
-                        <div class="row d-flex align-items-center justify-content-between my-1">
-                            <div class="col-9 col-lg-10 px-auto"><input type="text" class="w-100" name="search"
-                                    id="search" placeholder="Nhập từ khóa tìm kiếm">
-                            </div>
-                            <div class="col-3 col-lg-2 px-auto d-flex justify-content-between"><button
-                                    class="btn btn-primary mx-auto w-100">Tìm&nbsp;kiếm</button>
-                            </div>
+                        <div class="row d-flex align-items-center justify-content-between my-1 p-2">
+                            <input type="text" class="w-100" name="search" id="search"
+                                placeholder="Nhập từ khóa tìm kiếm">
                         </div>
                     </form>
                     <form action="" method="post">
@@ -142,8 +139,9 @@
                                     <option value="all">Tất Cả</option>
                                 </select>
                             </div>
-                            <div class="col-2">
-                                <button class="btn btn-primary w-100 h-75" id="filter">Lọc</button>
+                            <div class="col-md-2 col-sm-4 col-4">
+                                <button class="btn btn-primary w-100 h-75" id="filter"
+                                    style="background-color: #2e5fab;">Tìm&nbsp;Kiếm</button>
                             </div>
                         </div>
                     </form>
