@@ -31,7 +31,6 @@ body {
 #navi .btn-primary:hover {
     box-shadow: 1px 1px 5px 3px rgb(172, 198, 255);
     transform: translateY(-0.1em);
-    ;
 }
 
 #navi .dropdown:hover .dropdown-menu {

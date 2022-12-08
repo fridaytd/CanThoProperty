@@ -2,10 +2,14 @@
 
 fetch('./data.json')
     .then((response) => response.json())
-    .then((d) => render(d));
+    .then((data) => {
+        fetch('./content.json')
+            .then((response) => response.json())
+            .then((content) => render(data, content))
+    });
 
-let render = (data) => {
-    console.log(data)
+let render = (data, content) => {
+    console.log(content)
     let id = getID();
     for (let i = 0; i < data.length; i++) {
         if (data[i].id === id) {
@@ -65,6 +69,11 @@ let render = (data) => {
                 </div>`
             $('#detail').append(hehe)
             break;
+        }
+    }
+    for (let i = 0; i < content.length; i++) {
+        if (content[i].id == id) {
+            $('#content').append(content[i].content)
         }
     }
 }
