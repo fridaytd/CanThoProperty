@@ -6,6 +6,13 @@ fetch('./data.json')
 let run = (data) => {
     let render = (loai, hinhthuc, area, price, square) => {
         i = 0;
+        let savedItems = localStorage.getItem('savedItems');
+        if (!savedItems) {
+            savedItems = {};
+        }
+        else {
+            savedItems = JSON.parse(savedItems);
+        }
         data.forEach(element => {
             let gia = undefined
             if (element.price >= 1000000000) {
@@ -17,46 +24,46 @@ let run = (data) => {
             else {
                 gia = element.price
             }
-            if ((loai == 'all' || loai == element.loai) && (hinhthuc == "all" || hinhthuc == element.hinhthuc) && (area == 'all' || area == element.area) && (price == 'all' || (element.price >= firstVal(price) && element.price < secondVal(price))) && (square == 'all' || (element.square >= firstVal(square) && element.square < secondVal(square)))) {
+            if ((savedItems[element.id]) && (loai == 'all' || loai == element.loai) && (hinhthuc == "all" || hinhthuc == element.hinhthuc) && (area == 'all' || area == element.area) && (price == 'all' || (element.price >= firstVal(price) && element.price < secondVal(price))) && (square == 'all' || (element.square >= firstVal(square) && element.square < secondVal(square)))) {
                 let st = `<div class="row">
-                        <div class="card mb-3 p-0 list-items" id="${element.id}">
-                            <div class="row g-0">
-                                <div class="col-md-4">
-                                    <img src="${element.img[0]}" class="img-fluid rounded-start" alt="...">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">${element.name}</h5>
-                                        <div class="card-text">
-                                            <table>
-                                                <tr>
-                                                    <td><i class="fas fa-landmark"></i></td>
-                                                    <td>Loại:  ${element.loai}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><i class="fas fa-money-check-alt"></i></td>
-                                                    <td>Hình thức: ${element.hinhthuc}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><i class="fas fa-dollar-sign"></i></td>
-                                                    <td>Giá: ${gia}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><i class="fas fa-expand-arrows-alt"></i></td>
-                                                    <td>Diện tích: ${element.square} m<sup>2</sup></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><i class="fas fa-map-marker-alt"></i></td>
-                                                    <td>Khu vực: ${element.area}</td>
-                                                </tr>
-                                            </table>
-                                            <div class="d-flex justify-content-end save-item" onclick="changeState(event, ${element.id}, this)">${loadState(element.id)}</i></div>
-                                        </div>
+                    <div class="card mb-3 p-0 list-items" id="${element.id}">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="${element.img[0]}" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">${element.name}</h5>
+                                    <div class="card-text">
+                                        <table>
+                                            <tr>
+                                                <td><i class="fas fa-landmark"></i></td>
+                                                <td>Loại:  ${element.loai}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><i class="fas fa-money-check-alt"></i></td>
+                                                <td>Hình thức: ${element.hinhthuc}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><i class="fas fa-dollar-sign"></i></td>
+                                                <td>Giá: ${gia}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><i class="fas fa-expand-arrows-alt"></i></td>
+                                                <td>Diện tích: ${element.square} m<sup>2</sup></td>
+                                            </tr>
+                                            <tr>
+                                                <td><i class="fas fa-map-marker-alt"></i></td>
+                                                <td>Khu vực: ${element.area}</td>
+                                            </tr>
+                                        </table>
+                                        <div class="d-flex justify-content-end save-item" onclick="changeState(event, ${element.id}, this)">${loadState(element.id)}</i></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>`
+                    </div>
+                </div>`
                 $('#root-d').append(st);
                 i++;
             }
@@ -127,6 +134,7 @@ let changeState = (event, st, element) => {
     if (savedItems[id]) {
         delete savedItems[id];
         element.innerHTML = heart;
+        st.remove();
     }
     else {
         savedItems[id] = "true";
